@@ -9,3 +9,9 @@ section {
 #projects {
   background-color: #f5f3f3;
 }
+.gallery-img {
+  width: 100%;
+}
+#gallery .row > * {
+  padding: 0;
+}
