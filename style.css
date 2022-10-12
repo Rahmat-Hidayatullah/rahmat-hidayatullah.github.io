@@ -5,7 +5,7 @@
 section {
   padding-top: 5rem;
 }
-
+/* gallery */
 #projects,
 #gallery {
   background-color: #f5f3f3;
@@ -16,6 +16,140 @@ section {
 #gallery .row > * {
   padding: 0;
 }
+.image-box a {
+  overflow: hidden;
+  border: 5px solid #f3f4f5;
+  float: left;
+  margin-right: 10px;
+  margin-top: 5px;
+  position: relative;
+}
+.image-box a,
+.image-box a img,
+.image-box a span {
+  border-radius: 5px;
+}
+.image-box a span {
+  font-size: 30px;
+  display: block;
+  width: 300px;
+  height: 300px;
+  background-color: rgba(200, 200, 200, 0.5);
+  position: absolute;
+  top: 0;
+  text-align: center;
+  line-height: 250px;
+  color: #333;
+  text-shadow: 1px 1px 1px #ddd;
+  opacity: 0;
+  transform: scale(0) rotate(0);
+  transition: 0.5s;
+}
+.image-box a:hover span {
+  opacity: 1;
+  transform: scale(1) rotate(360deg);
+}
+.clear {
+  clear: both;
+}
+/* Overlay */
+.overlay {
+  width: 0;
+  height: 0;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0);
+  z-index: 9999;
+  transition: 0.5s;
+  text-align: center;
+  padding: 100px;
+}
+.overlay:target {
+  width: auto;
+  height: auto;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+.overlay img {
+  max-height: 65%;
+  box-shadow: 2px 2px 7px rgba(0, 0, 0, 0.5);
+  left: 50%;
+  margin-left: -100px;
+}
+.overlay:target img {
+  animation: fadeAjah 1s;
+}
+.overlay .close {
+  position: absolute;
+  top: 50px;
+  left: 50%;
+  margin-left: -85px;
+  color: white;
+  text-decoration: none;
+  background-color: black;
+  border: 1px solid white;
+  line-height: 14px;
+  padding: 5px;
+  opacity: 0;
+}
+.overlay:target .close {
+  animation: slideDownFade 0.5s 0.5s forwards;
+}
+.overlay:target .next,
+.overlay:target .prev {
+  animation: fadeAjah 0.5s 0.5s forwards;
+}
+/* navigasi */
+.next,
+.prev {
+  width: 57px;
+  height: 93px;
+  background-image: url(img/next.png);
+  text-indent: -99999px;
+  top: 40%;
+  margin-top: -220px !important;
+  margin-left: 115px;
+  opacity: 0;
+  border: 0px solid white !important;
+}
+.prev {
+  background-image: url(img/prev.png);
+  margin-left: -100px;
+}
+/* Animasi */
+@keyframes zoomDanfade {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes slideDownFade {
+  0% {
+    opacity: 0;
+    margin-top: -20px;
+  }
+  100% {
+    opacity: 1;
+    margin-top: 0;
+  }
+}
+@keyframes fadeAjah {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 /* my 3D section */
 
 .three-dimension-box {
@@ -97,4 +231,76 @@ section {
 
 .three-dimension-box:hover .three-dimension-img {
   transform: translate(-50%, -52%, 80px) rotate(15deg) scale(1, 2);
+}
+/* overlay 3d */
+.overlay3d {
+  width: 0;
+  height: 0;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0);
+  z-index: 9999;
+  transition: 0.5s;
+  text-align: center;
+  padding: 100px;
+}
+.overlay3d:target {
+  width: auto;
+  height: auto;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+.overlay3d img {
+  max-height: 75%;
+  box-shadow: 2px 2px 7px rgba(0, 0, 0, 0.5);
+  left: 50%;
+  margin-left: -110px;
+}
+
+.overlay3d:target img {
+  animation: fadeAjah 1s;
+}
+.overlay3d .close {
+  position: absolute;
+  top: 50px;
+  left: 50%;
+  color: white;
+  margin-left: -85px;
+  text-decoration: none;
+  background-color: black;
+  border: 1px solid white;
+  line-height: 14px;
+  padding: 5px;
+  opacity: 0;
+}
+.overlay3d:target .close {
+  animation: slideDownFade 0.5s 0.5s forwards;
+}
+
+/* * DESKTOP VERSION */
+@media (min-width: 992px) {
+  .overlay img {
+    max-height: 100%;
+    margin-left: -5px;
+    margin-top: 0;
+  }
+  .overlay .close {
+    margin-left: -15px;
+  }
+  .overlay3d img {
+    margin: 0px;
+  }
+  .overlay3d .close {
+    margin-left: -20px;
+  }
+  .next,
+  .prev {
+    margin-left: 850px;
+  }
+  .prev {
+    margin-left: 300px;
+  }
 }
