@@ -20,7 +20,7 @@ section {
   overflow: hidden;
   border: 5px solid #f3f4f5;
   float: left;
-  margin-right: 10px;
+  margin-right: -50px;
   margin-top: 5px;
   position: relative;
 }
@@ -286,7 +286,7 @@ section {
 @media (min-width: 992px) {
   .overlay img {
     max-height: 100%;
-    margin-left: -350px;
+    margin-left: -50px;
     margin-top: 0;
   }
   .overlay .close {
@@ -298,11 +298,12 @@ section {
   .overlay3d .close {
     margin-left: 525px;
   }
-  .next,
-  .prev {
-    margin-left: 850px;
+  .next {
+    position: absolute;
+    left: 1050px;
   }
   .prev {
-    margin-left: 300px;
+    position: absolute;
+    left: 100px;
   }
 }
