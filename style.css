@@ -286,20 +286,17 @@ section {
 @media (min-width: 992px) {
   .overlay img {
     max-height: 100%;
-    margin-left: -5px;
+    margin-left: -350px;
     margin-top: 0;
   }
   .overlay .close {
-    margin-left: -15px;
-  }
-  .overlay3d:target .close {
-    animation: slideDownFade 0.5s 0.5s forwards;
+    margin-left: 525px;
   }
   .overlay3d img {
     margin: 0px;
   }
   .overlay3d .close {
-    margin-left: -20px;
+    margin-left: 525px;
   }
   .next,
   .prev {
