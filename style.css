@@ -74,9 +74,10 @@ section {
   background-color: rgba(0, 0, 0, 0.7);
 }
 .overlay img {
-  max-height: 65%;
+  max-height: 100%;
   box-shadow: 2px 2px 7px rgba(0, 0, 0, 0.5);
   left: 50%;
+  margin-top: -70px;
   margin-left: -100px;
 }
 .overlay:target img {
@@ -86,7 +87,6 @@ section {
   position: absolute;
   top: 50px;
   left: 50%;
-  margin-left: -85px;
   color: white;
   text-decoration: none;
   background-color: black;
@@ -94,6 +94,7 @@ section {
   line-height: 14px;
   padding: 5px;
   opacity: 0;
+  left: 150px;
 }
 .overlay:target .close {
   animation: slideDownFade 0.5s 0.5s forwards;
@@ -107,17 +108,17 @@ section {
 .prev {
   width: 57px;
   height: 93px;
-  background-image: url(img/next.png);
+  background-image: url(img/navigation/next.png);
   text-indent: -99999px;
   top: 40%;
-  margin-top: -220px !important;
-  margin-left: 115px;
+  position: absolute;
+  right: 99999px;
   opacity: 0;
   border: 0px solid white !important;
 }
 .prev {
-  background-image: url(img/prev.png);
-  margin-left: -100px;
+  right: 200;
+  background-image: url(img/navigation/prev.png);
 }
 /* Animasi */
 @keyframes zoomDanfade {
@@ -254,10 +255,10 @@ section {
   background-color: rgba(0, 0, 0, 0.7);
 }
 .overlay3d img {
-  max-height: 75%;
+  max-height: 90%;
   box-shadow: 2px 2px 7px rgba(0, 0, 0, 0.5);
   left: 50%;
-  margin-left: -110px;
+  margin-left: -85px;
 }
 
 .overlay3d:target img {
@@ -268,13 +269,14 @@ section {
   top: 50px;
   left: 50%;
   color: white;
-  margin-left: -85px;
+  margin-left: 0px;
   text-decoration: none;
   background-color: black;
   border: 1px solid white;
   line-height: 14px;
   padding: 5px;
   opacity: 0;
+  left: 150px;
 }
 .overlay3d:target .close {
   animation: slideDownFade 0.5s 0.5s forwards;
@@ -289,6 +291,9 @@ section {
   }
   .overlay .close {
     margin-left: -15px;
+  }
+  .overlay3d:target .close {
+    animation: slideDownFade 0.5s 0.5s forwards;
   }
   .overlay3d img {
     margin: 0px;
