@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      .container {
+        display: grid;
+        place-items: center;
+        height: 100vh;
+        background: #0defff;
+        transition: all -4s ease-in-out;
+      }
+      .switch {
+        display: inline-block;
+        position: relative;
+        width: 120px;
+        height: 44px;
+        border-radius: 50%;
+      }
+      .switch input {
+        opacity: 0;
+        width: 0;
+        height: 0;
+        border-radius: 50%;
+      }
+      .slider {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        cursor: pointer;
+        background: #ffecb3;
+      }
+      .slider::before {
+        content: "";
+        position: absolute;
+        height: 44px;
+        width: 44px;
+        transition: 0.4s;
+      }
+      .round {
+        border-radius: 34px;
+      }
+      .round::before {
+        font-size: 1.5em;
+        line-height: 0.1em;
+        background: transparent;
+        content: "o";
+        display: grid;
+        place-items: center;
+      }
+      input:checked * .slider {
+        background: #123e52;
+      }
+      input:checked * .slider::before {
+        transform: translate(2.53em);
+      }
+      input:checked * .round::before {
+        content: "0";
+      }
+      .dark {
+        background: #0c0e11;
+      }
+      .light {
+        background: #0defff;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div id="label" class="switch toggle">
+        <input id="toggle" type="checkbox" />
+        <span class="slider round"></span>
+      </div>
+    </div>
+    <!-- javascript -->
+    <script>
+      const body = document.querySelector(".container");
+      const toggle = document.querySelector(".toggle");
+
+      toggle.addEventListener("click", () => {
+        body.classList.remove("dark");
+        if (toggle.checked) body.classList.add("dark");
+      });
+    </script>
+  </body>
+</html>
