@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Box Animation</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        min-height: 100vh;
+        margin-left: 100px;
+        margin-top: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: rgb(21, 21, 51);
+      }
+      .box {
+        position: relative;
+        width: 100px;
+        height: 120px;
+        background: rgba(0, 0, 0, 0.5);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 20px;
+        overflow: hidden;
+      }
+      .box::before {
+        content: "";
+        position: absolute;
+        width: 40px;
+        height: 140px;
+        background: linear-gradient(#00ccff, #d400d4);
+        animation: animate 3s linear infinite;
+      }
+      .box::after {
+        content: "";
+        position: absolute;
+        background-color: #0e1538;
+        border-radius: 16px;
+        inset: 4px;
+      }
+      @keyframes animate {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(350deg);
+        }
+      }
+      .box h2 {
+        position: relative;
+        z-index: 10;
+        color: #fff;
+        font-size: 45px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      <h2><img src="../img/photo.jpeg" alt="" width="90" class="rounded-circle img-thumbnail" /></h2>
+    </div>
+  </body>
+</html>

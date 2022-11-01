@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Squada+One&display=swap");
+      body {
+        display: grid;
+        place-items: center;
+        height: 100vh;
+        font-weight: bold;
+        background: #022b3a;
+        font: 3.5em "Squada One";
+      }
+      .text-copy {
+        fill: none;
+        stroke: #fff;
+        stroke-dasharray: 6% 29%;
+        stroke-width: 2px;
+        stroke-dashoffset: 0%;
+        animation: anim 5.5s infinite linear;
+      }
+      .text-copy:nth-child(1) {
+        stroke: #f25f5c;
+        animation-delay: -1s;
+      }
+      .text-copy:nth-child(2) {
+        stroke: #f25f5c;
+        animation-delay: -2s;
+      }
+      .text-copy:nth-child(3) {
+        stroke: #247bad;
+        animation-delay: -3s;
+      }
+      .text-copy:nth-child(4) {
+        stroke: #247bad;
+        animation-delay: -4s;
+      }
+      .text-copy:nth-child(5) {
+        stroke: #ffe066;
+        animation-delay: -5s;
+      }
+      @keyframes anim {
+        100% {
+          stroke-dashoffset: -35%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <svg viemBox="0 0 960 300">
+      <symbol id="s-text">
+        <text text-anchor="middle" x="50%" y="45%">RAHMAT</text>
+        <text text-anchor="middle" x="50%" y="80%">HIDAYATULLAH</text>
+      </symbol>
+      <g class="g-ants">
+        <use xLink:href="#s-text" class="text-copy"></use>
+        <use xLink:href="#s-text" class="text-copy"></use>
+        <use xLink:href="#s-text" class="text-copy"></use>
+        <use xLink:href="#s-text" class="text-copy"></use>
+        <use xLink:href="#s-text" class="text-copy"></use>
+      </g>
+    </svg>
+  </body>
+</html>

@@ -5,6 +5,85 @@
 section {
   padding-top: 5rem;
 }
+/* round animation */
+.box {
+  position: relative;
+  width: 210px;
+  height: 194px;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+}
+.box::before {
+  content: "";
+  position: absolute;
+  width: 40px;
+  height: 240px;
+  background: linear-gradient(#00ccff, #d400d4);
+  animation: animate 3s linear infinite;
+}
+.box::after {
+  content: "";
+  position: absolute;
+  border-radius: 120px;
+  inset: 3px;
+}
+@keyframes animate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(350deg);
+  }
+}
+.box img {
+  position: relative;
+  z-index: 10;
+  color: #fff;
+}
+/* text animation */
+
+@import url("https://fonts.googleapis.com/css2?family=Squada+One&display=swap");
+body {
+  font: "Squada One";
+}
+.text-copy {
+  fill: none;
+  stroke: #fff;
+  stroke-dasharray: 6% 29%;
+  stroke-width: 2px;
+  stroke-dashoffset: 0%;
+  animation: anim 5.5s infinite linear;
+}
+.text-copy:nth-child(1) {
+  stroke: #f25f5c;
+  animation-delay: -1s;
+}
+.text-copy:nth-child(2) {
+  stroke: #f25f5c;
+  animation-delay: -2s;
+}
+.text-copy:nth-child(3) {
+  stroke: #247bad;
+  animation-delay: -3s;
+}
+.text-copy:nth-child(4) {
+  stroke: #247bad;
+  animation-delay: -4s;
+}
+.text-copy:nth-child(5) {
+  stroke: #ffe066;
+  animation-delay: -5s;
+}
+@keyframes anim {
+  100% {
+    stroke-dashoffset: -35%;
+  }
+}
 /* gallery */
 #projects,
 #gallery {
