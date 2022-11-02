@@ -1,12 +1,18 @@
 .jumbotron {
   padding-top: 6rem;
-  background-color: #f5f3f3;
+  background-color: #fafafa;
 }
 section {
   padding-top: 5rem;
 }
+footer .rahmad {
+  text-decoration: none;
+}
+.aboutcontent, .card-text {
+text-align: justify;
+}
 /* round animation */
-.box {
+.roundanimation {
   position: relative;
   width: 210px;
   height: 194px;
@@ -18,15 +24,15 @@ section {
   align-items: center;
   margin: auto;
 }
-.box::before {
+.roundanimation::before {
   content: "";
   position: absolute;
-  width: 40px;
+  width: 100px;
   height: 240px;
   background: linear-gradient(#00ccff, #d400d4);
   animation: animate 3s linear infinite;
 }
-.box::after {
+.roundanimation::after {
   content: "";
   position: absolute;
   border-radius: 120px;
@@ -40,7 +46,7 @@ section {
     transform: rotate(350deg);
   }
 }
-.box img {
+.roundanimation img {
   position: relative;
   z-index: 10;
   color: #fff;
@@ -84,15 +90,18 @@ body {
     stroke-dashoffset: -35%;
   }
 }
-
 /* card animasi */
+
+#projects {
+  background-color: #fafafa;
+}
 .containercard {
   display: grid;
   place-items: center;
   position: relative;
   margin: 1px;
   width: 438px;
-  height: 538px;
+  height: 548px;
   border-radius: 1em;
   background: linear-gradient(50deg, #2a5a3b, #1e4886);
   overflow: hidden;
@@ -111,7 +120,7 @@ body {
 .card {
   display: grid;
   place-items: center;
-  width: 418px;
+  width: 348px;
   height: 518px;
   margin-left: -3px;
   background: rgb(243, 244, 245);
@@ -135,15 +144,35 @@ body {
   }
 }
 /* gallery */
-#projects,
 #gallery {
-  background-color: #f5f3f3;
+  background-color: #fff;
 }
 .gallery-img {
-  width: 100%;
+  width: 100%;  
+  margin-right: 50px;
 }
 #gallery .row > * {
   padding: 0;
+}
+.image-box {
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+}
+.image-box::before {
+  content: "";
+  position: absolute;
+  width: 40px;
+  height: 350px;
+  background: linear-gradient(#00ccff, #d400d4);
+  animation: animate 3s linear infinite;
+  margin-left: -120px;
+}
+.image-box::after {  
+  content: "";
+  background-color: #fafafa;
+  border-radius: 16px;
+  inset: 4px;
 }
 .image-box a {
   overflow: hidden;
@@ -161,8 +190,8 @@ body {
 .image-box a span {
   font-size: 30px;
   display: block;
-  width: 300px;
-  height: 300px;
+  width: 350px;
+  height: 350px;
   background-color: rgba(200, 200, 200, 0.5);
   position: absolute;
   top: 0;
@@ -281,7 +310,9 @@ body {
 }
 
 /* my 3D section */
-
+#three-dimension {
+  background-color: #fafafa;
+}
 .three-dimension-box {
   position: relative;
   background-color: #eaeaea;
@@ -478,4 +509,23 @@ body {
     position: absolute;
     left: 100px;
   }
+  .containercard {
+    width: 438px;
+    height: 538px;
+  }  
+.card {
+  width: 418px;
+  height: 518px;
+}
+
+.image-box a {
+  margin-right: -50px;
+  margin-top: 5px;
+}
+.gallery-img {
+  margin-right: 0;
+}
+.image-box a span {  
+  width: 300px;
+  height: 300px;
 }
