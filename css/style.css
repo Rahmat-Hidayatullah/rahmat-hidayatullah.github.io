@@ -692,16 +692,4 @@ body {
   .gallery-img {
     margin-right: 0;
   }
-}
-/* * DESKTOP VERSION */
-@media (min-width: 600px) {
-  .containercard {
-    width: 10px;
-    height: 538px;
-  }
-  .card {
-    width: 418px;
-    height: 518px;
-    margin: auto auto 10px -2px;
-  }
 }/*# sourceMappingURL=style.css.map */
