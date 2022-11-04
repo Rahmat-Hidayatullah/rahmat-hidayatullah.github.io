@@ -136,7 +136,7 @@ body {
   place-items: center;
   position: relative;
   margin: 1px;
-  width: 438px;
+  width: 408px;
   height: 548px;
   border-radius: 1em;
   background: linear-gradient(50deg, #2a5a3b, #1e4886);
@@ -691,5 +691,17 @@ body {
   }
   .gallery-img {
     margin-right: 0;
+  }
+}
+/* * DESKTOP VERSION */
+@media (min-width: 600px) {
+  .containercard {
+    width: 10px;
+    height: 538px;
+  }
+  .card {
+    width: 418px;
+    height: 518px;
+    margin: auto auto 10px -2px;
   }
 }/*# sourceMappingURL=style.css.map */
